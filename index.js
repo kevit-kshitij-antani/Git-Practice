@@ -1,31 +1,6 @@
-var express = require('express');
-var app = express();
-
-
-// This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
-    console.log("Create user account");
-    res.send('Hello GET');
-})
-
-app.get('/', function (req, res) {
-    console.log("Read user account");
-    res.send('Hello GET');
-})
-
-app.get('/', function (req, res) {
-    console.log("Delete user account");
-    res.send('Hello GET');
-})
-
-app.get('/', function (req, res) {
-    console.log("Update user account");
-    res.send('Hello GET');
-})
-
-var server = app.listen(8081, function () {
-    var host = server.address().address
-    var port = server.address().port
-
-    console.log("Example app listening at http://%s:%s", host, port)
-})
+    console.log("Got a GET request for the homepage");
+    const userCount = Math.ceil(Math.random() * 100);
+    res.send(`Hello GET. Users are: ${userCount}`);
+ })
+ 
