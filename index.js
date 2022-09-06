@@ -1,8 +1,6 @@
 var express = require('express');
 var app = express();
 
-
-// This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
     console.log("Create user account");
     res.send('Hello GET');
