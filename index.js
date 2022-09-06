@@ -21,6 +21,12 @@ app.get('/', function (req, res) {
     res.send('Hello GET');
 })
 
+app.get('/', function (req, res) {
+    console.log("Got a GET request for the homepage");
+    const userCount = 10;
+    res.send(`Hello GET. Users are: ${userCount}`);
+ })
+ 
 var server = app.listen(8081, function () {
     var host = server.address().address;
     var port = server.address().port;
